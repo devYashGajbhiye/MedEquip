@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedEquip</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>MedEquip</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()"></button>
+            <nav id="mainNav">
+                <a href="">Home</a>
+                <a href="">Medical Supplies</a>
+                <a href="">About Us</a>
+                <a href="">Reviews</a>
+                <a href="">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+   </header>
+
+  <section class="home-section" id="home">
+    <div class="carousel-container">
+
+        <div class="carousel-slide active" style="background-image: url('images/slides/slide1.jpeg');">
+            <div class="carousel-content">
+                <h1>Quality Medical Equipment for Better Care</h1>
+                <p>Your trusted partner in medical supplies and equipment.
+                    We provide comprehensive solutions for healthcare professionals
+                    and individuals.
+                </p>
+                <a href="#products" class="btn">Explore Products</a>
+            </div>
+        </div>
+
+        <div class="carousel-slide" style="background-image: url('images/slides/slide2.jpg');"></div>
+
+        <div class="carousel-slide" style="background-image: url('images/slides/slide3.avif');"></div>
+
+        <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+
+    </div>
+</section>
+
+
+   <section class="categories-section" id="categories">
+    <div class="container">
+        <h2 class="section-title">Medical Equipment Categories</h2>
+        <div class="categories-row">
+
+                <a class="category-card">
+                    <h3>Mobility Aids</h3>
+                    <img src="./images/category/mobilityaids.jpeg" alt="Mobility Aids">
+                </a>
+                
+                <a class="category-card">
+                    <h3>Surgical Instruments</h3>
+                    <img src="./images/category/surgicalinstruments.jpeg" alt="Surgical Instruments">
+                </a>
+
+                
+                 <a class="category-card">
+                    <h3>Health Wellness</h3>
+                    <img src="./images/category/healthwellness.jpeg" alt="Health Wellness">
+                </a>
+
+                 <a class="category-card">
+                    <h3>Personal Care</h3>
+                    <img src="./images/category/personalcare.jpeg" alt="Personal Care">
+                </a>
+
+                 <a class="category-card">
+                    <h3>Patient Care</h3>
+                    <img src="./images/category/patientcare.jpeg" alt="Patient Care">
+                </a>
+
+                 <a class="category-card">
+                    <h3>Support</h3>
+                    <img src="./images/category/support.jpeg" alt="Support">
+                </a>
+
+                 <a class="category-card">
+                    <h3>Ostomy Care</h3>
+                    <img src="./images/category/ostomycare.jpeg" alt="Ostomy Care">
+                </a>
+            </div>
+        </div>
+   </section>
+
+   
+    <script src="./js/script.js"></script>
+</body>
+</html>
