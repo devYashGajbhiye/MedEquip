@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,27 +30,14 @@
     </div>
    </header>
 
-  <section class="home-section" id="home">
-    <div class="carousel-container">
-
-        <div class="carousel-slide active" style="background-image: url('images/slides/slide1.jpeg');">
-            <div class="carousel-content">
-                <h1>Quality Medical Equipment for Better Care</h1>
+  <section class="hero-banner">
+    <div class="hero-content">
+        <h1>Quality Medical Equipment for Better Care</h1>
                 <p>Your trusted partner in medical supplies and equipment.
                     We provide comprehensive solutions for healthcare professionals
                     and individuals.
                 </p>
-                <a href="#products" class="btn">Explore Products</a>
-            </div>
-        </div>
-
-        <div class="carousel-slide" style="background-image: url('images/slides/slide2.jpg');"></div>
-
-        <div class="carousel-slide" style="background-image: url('images/slides/slide3.avif');"></div>
-
-        <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
-        <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
-
+        <a href="#products" class="hero-btn">Explore Now</a>
     </div>
 </section>
 
@@ -97,6 +85,171 @@
             </div>
         </div>
    </section>
+
+   <section class="top-brands">
+   <div class="brands-container">
+
+    <div class="brands-header">
+      <h2>Top Brands</h2>
+      <a href="#" class="view-all">View All</a>
+    </div>
+
+    <div class="brands-wrapper">
+
+
+    <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
+    <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
+
+    <div class="brands-grid" id="brandsSlider">
+
+      <div class="brand-card">
+        <img src="images/brands/Omron.jpg" alt="Omron">
+        <p>60+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/Philips.png" alt="Philips">
+        <p>40+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/littman.jpg" alt="3M Littmann">
+        <p>40+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/beurer.png" alt="Beurer">
+        <p>20+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/Siemens.png" alt="Siemens">
+        <p>50+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/lifex.jpeg" alt="LifeX">
+        <p>160+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/elitemed.jpeg" alt="Elite Med India">
+        <p>160+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/hmd.jpg" alt="HMD Healthcare">
+        <p>160+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/Trivitron.jpeg" alt="Trivitron Healthcare">
+        <p>160+ Products</p>
+      </div>
+
+      <div class="brand-card">
+        <img src="images/brands/WelchAllyn.png" alt="Welch Allyn">
+        <p>40+ Products</p>
+      </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="big-savings">
+    <div class="savings-container">
+
+        <div class="savings-header">
+            <h2>Big Savings</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+
+        <div class="savings-wrapper">
+
+            <button class="scroll-btn left" onclick="scrollSavings(-300)">&#10094;</button>
+            <button class="scroll-btn right" onclick="scrollSavings(300)">&#10095;</button>
+
+            <div class="savings-grid" id="savingsGrid">
+
+                <div class="saving-card">
+                    <img src="images/xray.png" alt="X-Ray Machine">
+                    <h4>RMS X-Ray Machine</h4>
+                    <p class="price">₹1,61,000</p>
+                </div>
+
+                <div class="saving-card">
+                    <img src="images/spiro.png" alt="Spirometer">
+                    <h4>RMS PC Based Spirometer</h4>
+                    <p class="price">₹33,600</p>
+                </div>
+
+                <div class="saving-card">
+                    <img src="images/ecg.png" alt="ECG Machine">
+                    <h4>RMS Vesta 12EC ECG Machine</h4>
+                    <p class="price">₹65,000</p>
+                </div>
+
+                <div class="saving-card">
+                    <img src="images/tmt.png" alt="TMT Machine">
+                    <h4>RMS TMT Machine</h4>
+                    <p class="price">₹1,96,000</p>
+                </div>
+
+                <div class="saving-card">
+                    <img src="images/tmt.png" alt="TMT Machine">
+                    <h4>RMS TMT Machine</h4>
+                    <p class="price">₹1,96,000</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>MedEquip</h2>
+            <p>Fast shopping. Happy clicking.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><strong>Address: </strong>Pentagon 3GW6F+G72, Magarpatta, Hadapsar, Pune, Maharashtra 411013  </p>
+            <p><strong>Email: </strong><a href="mailto:info@MedEquip.com">info@MedEquip.com</a></p>
+            <p><strong>Contact No: </strong><a href="tel:+919876543210">+91 98765 43210</a></p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+             <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                 <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+                <p>© MedEquip 2025. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
 
    
     <script src="./js/script.js"></script>

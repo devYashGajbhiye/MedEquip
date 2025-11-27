@@ -18,3 +18,20 @@ function prevSlide() {
 
 // Auto-slide every 5 seconds
 setInterval(nextSlide, 5000);
+
+
+function scrollLeft() {
+    const slider = document.getElementById("brandsSlider");
+    slider.scrollBy({ left: -300, behavior: "smooth" });
+  }
+
+  function scrollRight() {
+    const slider = document.getElementById("brandsSlider");
+    slider.scrollBy({ left: 300, behavior: "smooth" });
+  }
+
+
+
+ function scrollSavings(amount) {
+        document.getElementById('savingsGrid').scrollBy({ left: amount, behavior: 'smooth' });
+    }
