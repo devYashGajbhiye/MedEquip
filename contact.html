@@ -4,8 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+       <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>MedEquip</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()"></button>
+            <nav id="mainNav">
+                <a href="">Home</a>
+                <a href="">Medical Supplies</a>
+                <a href="">About Us</a>
+                <a href="">Reviews</a>
+                <a href="">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+   </header>
+
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <div class="subtitle">We'd love to hear from you! 
+            Reach out through any of the channels below.</div>
+
+            <div class="top-section">
+                <div class="card">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter Your Full Name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter Email...">
+                        </div>
+                        <div class="fom-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" required placeholder="How can we help you?"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Contact Information</h2>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="icon">📧</div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:support@company.com">support@company.com</a></p>
+                                <p><a href="mailto:sales@company.com">sales@company.com</a></p>
+                                <p><a href="mailto:press@company.com">press@company.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">📞</div>
+                            <div class="info-content">
+                                <h3>Phone</h3>
+                                <p>Customer Service: <a href="tel:+18005551234">+91 (800) 555-1234</a></p>
+                                <p>Sales: <a href="tel:+18005555678">+91 (800) 555-5678</a></p>
+                                <p>Support: <a href="tel:+18005559012">+91 (800) 555-9012</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">📍</div>
+                            <div class="info-content">
+                                <h3>Visit Us</h3>
+                                <p>Pentagon 3GW6F+G72, Magarpatta, Hadapsar, Pune, Maharashtra 411013</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">🕒</div>
+                            <div class="info-content">
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday: 6:00 AM - 11:00 PM IST<br>Saturday: 06:00 AM - 02:00 AM IST</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="additional-links">
+                <div class="link-card" onclick="location.href='#faq'">
+                    <div class="icon">❓</div>
+                    <h3>FAQ</h3>
+                    <p>Find answers to commonly asked questions</p>
+                </div>
+                <div class="link-card" onclick="alert('Live chat feature coming soon!')">
+                    <div class="icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our support team in real-time</p>
+                </div>
+                <div class="link-card" onclick="location.href='support'">
+                    <div class="icon">🛟</div>
+                    <h3>Support Center</h3>
+                    <p>Access our comprehensive help resources</p>
+                </div>
+            </div>
+
+             <!-- Map -->
+        <div class="card">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.682279992558!2d-73.98823492346732!3d40.748817671428145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus" allowfullscreen="" loading="lazy" style="width: 100%; height: 350px; border-radius: 15px; border: none;"></iframe>
+        </div>
+
+         <div class="card social-links">
+            <h2>Connect With Us</h2>
+            <p class="subtitle" style="color: #666; margin-bottom: 25px;">Follow us on social media for updates and news</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="fa fa-facebook-f"></a>
+                <a href="https://instagram.com" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://twitter.com" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://youtube.com" target="_blank" class="fa fa-youtube"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>BlinkBasket</h2>
+            <p>Fast shopping. Happy clicking.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><strong>Address: </strong>Pentagon 3GW6F+G72, Magarpatta, Hadapsar, Pune, Maharashtra 411013  </p>
+            <p><strong>Email: </strong><a href="mailto:info@skynova.com">info@blinkbasket.com</a></p>
+            <p><strong>Contact No: </strong><a href="tel:+919876543210">+91 98765 43210</a></p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+             <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                 <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+                <p>© BlinkBasket 2025. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
