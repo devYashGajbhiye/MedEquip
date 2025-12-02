@@ -27,9 +27,10 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 2rem;
 }
 
 .logo {
@@ -56,7 +57,9 @@ header {
 nav {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 nav a {
@@ -67,8 +70,71 @@ nav a {
     transition: background 0.3s ease;
 }
 
+nav a, .dropbtn {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+}
+
 nav a:hover, nav a.active {
     background: rgba(255, 255, 255, 0.2);   
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .dropdown {
+        width: 100%;
+    }
+    .dropbtn {
+        width: 100%;
+        text-align: left;
+    }
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        width: 100%;
+    }
 }
 
 .menu-toggle {
@@ -87,7 +153,7 @@ nav a:hover, nav a.active {
 
 h1 {
     text-align: center;
-    color: white;
+    color: #2f99f0;
     font-size: 2.5rem;
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -95,7 +161,7 @@ h1 {
 
 .subtitle {
     text-align: center;
-    color: rgba(255, 255, 255, 0.9);
+    color: #2f99f0;
     margin-bottom: 40px;
     font-size: 1.1em;
 }
@@ -127,7 +193,7 @@ h1 {
 }
 
  .card h2 {
-            color: #667eea;
+            color: #2f99f0;
             margin-bottom: 20px;
             font-size: 1.8em;
         }
@@ -164,7 +230,7 @@ h1 {
 
         .submit-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            color: #2f99f0;
             border: none;
             padding: 14px 40px;
             font-size: 1.1em;
@@ -216,7 +282,7 @@ h1 {
         }
 
         .info-content a {
-            color: #667eea;
+            color: #2f99f0;
             text-decoration: none;
         }
 

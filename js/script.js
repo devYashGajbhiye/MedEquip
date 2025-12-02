@@ -65,3 +65,31 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     alert("Your message has been submitted successfully!");
 });
+
+
+const slider = document.getElementById("brandsSlider");
+
+let clone = slider.innerHTML;
+slider.innerHTML += clone;
+
+let speed = 1;
+
+function infiniteSlide() {
+  slider.scrollLeft += speed;
+
+  if (slider.scrollLeft >= slider.scrollWidth / 2) {
+    slider.scrollLeft = 0;
+  }
+
+  requestAnimationFrame(infiniteSlide);
+}
+
+infiniteSlide();
+
+function goToReview() {
+    window.location.href = "review.html"; 
+}
+
+function goToContact() {
+    window.location.href = "contact.html"
+}

@@ -27,9 +27,10 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 2rem;
 }
 
 .logo {
@@ -56,7 +57,9 @@ header {
 nav {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 nav a {
@@ -67,6 +70,12 @@ nav a {
     transition: background 0.3s ease;
 }
 
+nav a, .dropbtn {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+}
+
 nav a:hover, nav a.active {
     background: rgba(255, 255, 255, 0.2);   
 }
@@ -74,9 +83,13 @@ nav a:hover, nav a.active {
 .dropdown {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
+    align-items: center;
 }
 
 .dropbtn {
+    display: flex;
+    align-items: center;
     background: none;
     border: none;
     font-size: 16px;
@@ -198,16 +211,20 @@ nav a:hover, nav a.active {
             background: white;
             padding: 15px;
             border-radius: 10px;
+            text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: 0.3s ease;
         }
 
         .product-card:hover {
-            transform: scale(1.03);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 14px rgba(0,0,0,0.2);      
         }
 
         .product-card img {
             width: 100%;
+            height: 180px;
+            object-fit: contain;
             border-radius: 10px;
         }
 
@@ -234,6 +251,31 @@ nav a:hover, nav a.active {
             border-radius: 25px;
             border: 1px solid #ccc;
         }
+
+        .rating {
+    font-size: 18px;
+    color: #FFD700; /* Gold stars */
+    margin-bottom: 5px;
+}
+
+/* Add to Cart Button */
+.add-btn {
+    margin-top: 8px;
+    background: #007bff;   /* Header Blue */
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #0056b3;
+}
+
 
 .footer {
 background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
