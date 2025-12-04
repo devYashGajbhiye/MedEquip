@@ -199,82 +199,504 @@ nav a:hover, nav a.active {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-        /* Products */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .product-card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 14px rgba(0,0,0,0.2);      
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        .product-card h4 {
-            margin: 10px 0 5px;
-        }
-
-        .product-card p {
-            margin: 0;
-            color: gray;
-        }
-
-        /* Search Bar */
-        .search-bar {
-            width: 100%;
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        .search-bar input {
-            width: 50%;
-            padding: 12px;
-            font-size: 16px;
-            border-radius: 25px;
-            border: 1px solid #ccc;
-        }
-
-        .rating {
-    font-size: 18px;
-    color: #FFD700; /* Gold stars */
-    margin-bottom: 5px;
+/* Featured Title */
+.featured-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-/* Add to Cart Button */
-.add-btn {
-    margin-top: 8px;
-    background: #007bff;   /* Header Blue */
-    color: white;
-    border: none;
-    padding: 10px 14px;
+/* Slider Container */
+.slider-container {
+    position: relative;
     width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Buttons */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 5;
+    font-size: 20px;
+}
+
+.prev { left: -10px; }
+.next { right: -10px; }
+
+/* Slider Content */
+.product-slider {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+}
+
+.product-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Product Card — EXACT STYLE MATCH */
+.product-card2 {
+    width: 240px;
+    min-width: 240px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Product Image */
+.product-card2 img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Title */
+.product-card2 h4 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+}
+
+/* Price */
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.cart-btn2 {
+    width: 100%;
+    padding: 12px 0;
+    background: #1e88e5;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: auto; /* push button to bottom */
+    transition: 0.2s ease;
+}
+
+.cart-btn2:hover {
+    background: #1565c0;
+}
+
+.mobility-aids {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.mobility-container {
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+
+.mobility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.mobility-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.view-all {
+  color: #2c58ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mobility-wrapper {
+  position: relative;
+}
+
+.mobility-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.mobility-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 26px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: -10px;
+}
+
+.scroll-btn.right {
+  right: -10px;
+}
+
+.mobility-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 230px;
+  max-width: 230px;
+  height: 300px;
+  text-align: center;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+  white-space: normal;
+  overflow: hidden;
+}
+
+
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transform: translateY(-4px);
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.product-card img {
+   height: 100px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card h4 {
+   font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 5px 0;
+  line-height: 1.3;
+  height: 40px;
+  overflow: hidden;
+  margin-top: 20px; 
+}
+
+.price {
+  color: #000;
+  font-weight: 700;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.cart-btn {
+     margin-top: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 14px;
+    border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.add-btn:hover {
-    background: #0056b3;
+.cart-btn:hover {
+    background-color: #2980b9;
 }
+
+.surgical-instruments {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.surg-container {
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.surg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.surg-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.surg-wrapper {
+  position: relative;
+}
+
+.surg-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.surg-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.health-wellness {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.health-container {
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.health-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.health-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.health-wrapper {
+  position: relative;
+}
+
+.health-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.health-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.personal-care {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.personal-container {
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.personal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.personal-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.personal-wrapper {
+  position: relative;
+}
+
+.personal-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.personal-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.patient-care {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.patient-container {
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.patient-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.patient-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.patient-wrapper {
+  position: relative;
+}
+
+.patient-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.patient-grid::-webkit-scrollbar {
+  display: none;
+}
+
+
+.support-care {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.support-container {
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.support-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.support-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.support-wrapper {
+  position: relative;
+}
+
+.support-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.support-grid::-webkit-scrollbar {
+  display: none;
+}
+
+
+.ostomy-care {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.ostomy-container {
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
+
+.ostomy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ostomy-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.ostomy-wrapper {
+  position: relative;
+}
+
+.ostomy-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.ostomy-grid::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 
 .footer {

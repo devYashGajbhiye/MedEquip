@@ -470,14 +470,14 @@ nav a:hover, nav a.active {
   line-height: 1.3;
   height: 40px;
   overflow: hidden;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .price {
   color: #000;
   font-weight: 700;
   font-size: 17px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .saving-card:hover {
@@ -488,6 +488,25 @@ nav a:hover, nav a.active {
 .saving-card:hover img {
   transform: scale(1.1);
 }
+
+.cart-btn {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background-color: #0056b3;
+}
+
 
 
 .features-section,

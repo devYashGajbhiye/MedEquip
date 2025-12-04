@@ -11,6 +11,463 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+     <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>MedEquip</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()"></button>
+            <nav id="mainNav">
+                <a href="">Home</a>
+                <div class="dropdown">
+                    <a href="./medicalsupplies.html" class="dropbtn">Medical Supplies ▾</a>
+                    <div class="dropdown-content">
+                        <a href="./mobilityaids.html">Mobility Aids</a>
+                        <a href="./healthwellness.html">Health & Wellness</a>
+                        <a href="./personalcare.html">Personal Care</a>
+                        <a href="./patientcare.html">Patient Care</a>
+                        <a href="./support.html">Support Care</a>
+                        <a href="./ostomycare.html">Ostomy Care</a>
+                    </div>
+                </div>
+                <a href="./about.html">About Us</a>
+                <a href="">Reviews</a>
+                <a href="./contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+   </header>
+
+   
+    <div class="container">
+        <!-- Overall Rating Overview -->
+        <div class="rating-overview">
+            <div class="rating-summary">
+                <div class="overall-rating">4.8</div>
+                <div class="stars-large">★★★★★</div>
+                <div class="total-reviews">Based on 2,847 reviews</div>
+                <div class="recommend-badge">✓ 96% Recommend</div>
+            </div>
+            <div class="rating-breakdown">
+                <div class="rating-bar">
+                    <span class="star-label">5 ★★★★★</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 78%"></div>
+                    </div>
+                    <span class="rating-count">2,221</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="star-label">4 ★★★★☆</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 15%"></div>
+                    </div>
+                    <span class="rating-count">427</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="star-label">3 ★★★☆☆</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 4%"></div>
+                    </div>
+                    <span class="rating-count">114</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="star-label">2 ★★☆☆☆</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 2%"></div>
+                    </div>
+                    <span class="rating-count">57</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="star-label">1 ★☆☆☆☆</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 1%"></div>
+                    </div>
+                    <span class="rating-count">28</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Section -->
+        <div class="trust-section">
+            <h3>Why Trust Our Reviews?</h3>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="icon">✓</div>
+                    <div class="label">Verified Purchases</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="icon">🔒</div>
+                    <div class="label">Secure & Authentic</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="icon">💬</div>
+                    <div class="label">Real Customers</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="icon">⚡</div>
+                    <div class="label">Quick Response</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Highlights -->
+        <div class="review-highlights">
+            <h3>What Customers Love</h3>
+            <div class="highlight-tags">
+                <div class="highlight-tag">
+                    ⭐ Great Quality
+                    <span class="count">1,845</span>
+                </div>
+                <div class="highlight-tag">
+                    🚚 Fast Delivery
+                    <span class="count">1,623</span>
+                </div>
+                <div class="highlight-tag">
+                    💰 Good Value
+                    <span class="count">1,489</span>
+                </div>
+                <div class="highlight-tag">
+                    👍 Easy to Use
+                    <span class="count">1,234</span>
+                </div>
+                <div class="highlight-tag">
+                    💪 Durable
+                    <span class="count">1,098</span>
+                </div>
+                <div class="highlight-tag">
+                    ❤️ Excellent Service
+                    <span class="count">987</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="filters-header">
+                <h3>Filter Reviews</h3>
+                <select class="sort-dropdown" id="sortSelect">
+                    <option value="recent">Most Recent</option>
+                    <option value="helpful">Most Helpful</option>
+                    <option value="highest">Highest Rating</option>
+                    <option value="lowest">Lowest Rating</option>
+                </select>
+            </div>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Reviews</button>
+                <button class="filter-btn" data-filter="5">5 Stars</button>
+                <button class="filter-btn" data-filter="4">4 Stars</button>
+                <button class="filter-btn" data-filter="3">3 Stars</button>
+                <button class="filter-btn" data-filter="verified">Verified Only</button>
+                <button class="filter-btn" data-filter="photos">With Photos</button>
+            </div>
+        </div>
+
+        <!-- Write Review Section -->
+        <div class="write-review-section">
+            <h3>✍️ Write Your Review</h3>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label>Your Rating *</label>
+                    <div class="star-rating-input" id="starRating">
+                        <span class="star-input" data-rating="1">★</span>
+                        <span class="star-input" data-rating="2">★</span>
+                        <span class="star-input" data-rating="3">★</span>
+                        <span class="star-input" data-rating="4">★</span>
+                        <span class="star-input" data-rating="5">★</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Product Purchased *</label>
+                    <select required>
+                        <option value="">Select a product</option>
+                        <option value="wheelchair">Premium Wheelchair</option>
+                        <option value="walker">Walking Frame</option>
+                        <option value="bp-monitor">Blood Pressure Monitor</option>
+                        <option value="hospital-bed">Hospital Bed</option>
+                        <option value="knee-brace">Knee Brace</option>
+                        <option value="ostomy">Ostomy Pouches</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Review Title *</label>
+                    <input type="text" placeholder="Sum up your experience" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Review *</label>
+                    <textarea placeholder="Share your experience with this product..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Your Name *</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Upload Photos (Optional)</label>
+                    <div class="photo-upload">
+                        <p>📷 Click to upload photos</p>
+                        <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 0.5rem;">Maximum 5 photos, 5MB each</p>
+                    </div>
+                </div>
+                <button type="submit" class="submit-review-btn">Submit Review</button>
+            </form>
+        </div>
+
+        <!-- Reviews List -->
+        <div class="reviews-container" id="reviewsContainer">
+            <!-- Review 1 -->
+            <div class="review-card" data-rating="5" data-verified="true" data-photos="true">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">SJ</div>
+                        <div class="reviewer-details">
+                            <h4>Sarah Johnson</h4>
+                            <div class="reviewer-meta">Healthcare Professional • Boston, MA • 2 days ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                    </div>
+                </div>
+                <div class="review-product">Premium Wheelchair</div>
+                <div class="review-title">Best wheelchair for my elderly mother</div>
+                <div class="review-text">
+                    This wheelchair has been a game-changer for my mother's mobility. The lightweight design makes it easy to transport, and the adjustable features ensure perfect comfort. Assembly was straightforward, and the quality is outstanding. The padding is comfortable even for extended use, and the wheels roll smoothly on various surfaces. Highly recommend for anyone looking for a reliable mobility solution.
+                </div>
+                <div class="review-images">
+                    <div class="review-image">📷</div>
+                    <div class="review-image">📷</div>
+                    <div class="review-image">📷</div>
+                </div>
+                <div class="review-footer">
+                    <div class="helpful-section">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👍 Yes (247)</button>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👎 No (3)</button>
+                    </div>
+                    <div style="color: #7f8c8d; font-size: 0.9rem;">3 months of use</div>
+                </div>
+                <div class="company-response">
+                    <h5>🏢 MediCare Supply Response</h5>
+                    <p>Thank you so much for your wonderful feedback, Sarah! We're thrilled to hear that the wheelchair is making such a positive difference for your mother. If you ever need any assistance or have questions, our support team is always here to help.</p>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card" data-rating="5" data-verified="true" data-photos="false">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">MT</div>
+                        <div class="reviewer-details">
+                            <h4>Michael Thompson</h4>
+                            <div class="reviewer-meta">Individual User • Seattle, WA • 5 days ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                    </div>
+                </div>
+                <div class="review-product">Blood Pressure Monitor</div>
+                <div class="review-title">Accurate and easy to use</div>
+                <div class="review-text">
+                    I've been using this blood pressure monitor for the past two months, and it's been incredibly reliable. The readings are consistent with what my doctor gets, and the large display makes it easy to read. The memory function is great for tracking my progress over time. Setup was simple, and it comes with clear instructions. Worth every penny!
+                </div>
+                <div class="review-footer">
+                    <div class="helpful-section">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👍 Yes (189)</button>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👎 No (2)</button>
+                    </div>
+                    <div style="color: #7f8c8d; font-size: 0.9rem;">2 months of use</div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card" data-rating="4" data-verified="true" data-photos="true">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">EP</div>
+                        <div class="reviewer-details">
+                            <h4>Emily Parker</h4>
+                            <div class="reviewer-meta">Caregiver • Denver, CO • 1 week ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                    </div>
+                </div>
+                <div class="review-product">Hospital Bed</div>
+                <div class="review-title">Great quality, minor assembly challenges</div>
+                <div class="review-text">
+                    The hospital bed is exactly what we needed for home care. The electric adjustments work smoothly, and the mattress is comfortable. My only complaint is that assembly took longer than expected - about 2 hours with two people. Instructions could be clearer. However, once set up, it's been perfect. The side rails are sturdy and give us peace of mind.
+                </div>
+                <div class="review-images">
+                    <div class="review-image">📷</div>
+                    <div class="review-image">📷</div>
+                </div>
+                <div class="review-footer">
+                    <div class="helpful-section">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👍 Yes (156)</button>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👎 No (8)</button>
+                    </div>
+                    <div style="color: #7f8c8d; font-size: 0.9rem;">1 month of use</div>
+                </div>
+                <div class="company-response">
+                    <h5>🏢 MediCare Supply Response</h5>
+                    <p>Thank you for your feedback, Emily. We're glad the bed is working well for your needs. We've taken note of your comments about the assembly instructions and are working to improve them. If you need any assistance in the future, please don't hesitate to reach out!</p>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card" data-rating="5" data-verified="true" data-photos="false">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">RK</div>
+                        <div class="reviewer-details">
+                            <h4>Robert Kim</h4>
+                            <div class="reviewer-meta">Healthcare Professional • Chicago, IL • 2 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                    </div>
+                </div>
+                <div class="review-product">Knee Brace</div>
+                <div class="review-title">Perfect support for post-surgery recovery</div>
+                <div class="review-text">
+                    After my ACL surgery, this knee brace has been essential to my recovery. It provides excellent support without being too restrictive. The adjustable straps allow for a customized fit, and the breathable material prevents sweating. I can wear it all day without discomfort. My physical therapist was impressed with the quality. Highly recommend for anyone recovering from knee surgery or dealing with chronic knee pain.
+                </div>
+                <div class="review-footer">
+                    <div class="helpful-section">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👍 Yes (134)</button>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👎 No (1)</button>
+                    </div>
+                    <div style="color: #7f8c8d; font-size: 0.9rem;">6 weeks of use</div>
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card" data-rating="5" data-verified="true" data-photos="true">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">LC</div>
+                        <div class="reviewer-details">
+                            <h4>Linda Chen</h4>
+                            <div class="reviewer-meta">Caregiver • San Francisco, CA • 3 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                    </div>
+                </div>
+                <div class="review-product">Walking Frame</div>
+                <div class="review-title">Excellent mobility aid for my father</div>
+                <div class="review-text">
+                    My father has been using this walker for a month now and his confidence has improved tremendously. It's lightweight yet sturdy, and the height adjustments are easy to make. The rubber tips provide great traction on all surfaces. Folds easily for storage in the car. The quality is exceptional and customer service was helpful with sizing questions. Best purchase we've made for his independence!
+                </div>
+                <div class="review-images">
+                    <div class="review-image">📷</div>
+                </div>
+                <div class="review-footer">
+                    <div class="helpful-section">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👍 Yes (112)</button>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👎 No (2)</button>
+                    </div>
+                    <div style="color: #7f8c8d; font-size: 0.9rem;">1 month of use</div>
+                </div>
+                <div class="company-response">
+                    <h5>🏢 MediCare Supply Response</h5>
+                    <p>We're so happy to hear about your father's improved confidence, Linda! Independence is so important, and we're glad our walker is helping him maintain his mobility. Thank you for choosing MediCare Supply!</p>
+                </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-card" data-rating="3" data-verified="true" data-photos="false">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">JB</div>
+                        <div class="reviewer-details">
+                            <h4>James Brown</h4>
+                            <div class="reviewer-meta">Individual User • Miami, FL • 1 month ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★☆☆</span>
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                    </div>
+                </div>
+                <div class="review-product">Ostomy Pouches</div>
+                <div class="review-title">Good product but sizing could be better</div>
+                <div class="review-text">
+                    The pouches work well overall and the adhesive is strong. However, I found the sizing guide a bit confusing and ordered the wrong size initially. The return process was smooth though. Once I got the right size, they've been reliable. The odor control is excellent. Would be 5 stars if the sizing information was clearer on the website.
+                </div>
+                <div class="review-footer">
+                    <div class="helpful-section">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👍 Yes (89)</button>
+                        <button class="helpful-btn" onclick="markHelpful(this)">👎 No (5)</button>
+                    </div>
+                    <div style="color: #7f8c8d; font-size: 0.9rem;">5 weeks of use</div>
+                </div>
+                <div class="company-response">
+                    <h5>🏢 MediCare Supply Response</h5>
+                    <p>Thank you for your honest feedback, James. We apologize for the confusion with sizing. We're currently updating our sizing guide with clearer measurements and visual aids. We appreciate your patience and are glad the products are working well for you now!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>MedEquip</h2>
+            <p>Fast shopping. Happy clicking.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><strong>Address: </strong>Pentagon 3GW6F+G72, Magarpatta, Hadapsar, Pune, Maharashtra 411013  </p>
+            <p><strong>Email: </strong><a href="mailto:info@MedEquip.com">info@MedEquip.com</a></p>
+            <p><strong>Contact No: </strong><a href="tel:+919876543210">+91 98765 43210</a></p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+             <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                 <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+                <p>© MedEquip 2025. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
     <script></script>
 </body>
 </html>

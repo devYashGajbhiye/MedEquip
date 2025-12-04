@@ -25,6 +25,7 @@
                     <a href="./medicalsupplies.html" class="dropbtn">Medical Supplies ▾</a>
                     <div class="dropdown-content">
                         <a href="./mobilityaids.html">Mobility Aids</a>
+                        <a href="./surgicalinstruments.html">Surgical Instruments</a>
                         <a href="./healthwellness.html">Health & Wellness</a>
                         <a href="./personalcare.html">Personal Care</a>
                         <a href="./patientcare.html">Patient Care</a>
@@ -42,14 +43,6 @@
 
 
    <div class="container">
-
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search medical products..." onkeyup="searchProducts()">
-    </div>
-
-    <!-- TITLE -->
-    <h2>All Categories</h2>
 
    <section class="categories-section" id="categories">
     <div class="container">
@@ -95,57 +88,183 @@
         </div>
    </section>
 
-    <h2 style="margin-top:40px;">Featured Products</h2>
+   <h2 class="featured-title">Featured Products</h2>
 
-     <div class="product-card" data-name="Wheelchair">
-        <img src="./images/mobility/Manual-Wheelchair.jpeg">
-        <h4>Standard Wheelchair</h4>
-        <div class="rating">★★★★☆</div>
-        <p>₹4,999</p>
-        <button class="add-btn">Add to Cart</button>
+<div class="slider-container">
+    <button class="slide-btn prev" onclick="slideLeft()">&#10094;</button>
+
+    <div class="product-slider" id="productSlider">
+
+        <div class="product-card2">
+            <img src="./images/mobility/Manual-Wheelchair.jpeg" alt="">
+            <h4>Standard Wheelchair</h4>
+            <p class="price">₹4,999</p>
+            <button class="cart-btn2">Add to Cart</button>
+        </div>
+
+        <div class="product-card2">
+            <img src="./images/health_wellness/blood-pressure-monitor.jpeg" alt="">
+            <h4>Digital BP Monitor</h4>
+            <p class="price">₹2,499</p>
+            <button class="cart-btn2">Add to Cart</button>
+        </div>
+
+        <div class="product-card2">
+            <img src="./images/mobility/Folding-Walker.jpeg" alt="">
+            <h4>Adjustable Walker</h4>
+            <p class="price">₹1,899</p>
+            <button class="cart-btn2">Add to Cart</button>
+        </div>
+
+        <div class="product-card2">
+            <img src="./images/health_wellness/Nebulizer.jpeg" alt="">
+            <h4>Portable Nebulizer</h4>
+            <p class="price">₹1,499</p>
+            <button class="cart-btn2">Add to Cart</button>
+        </div>
+
+        <div class="product-card2">
+            <img src="./images/patient_care/Air-mattress.jpeg" alt="">
+            <h4>Air Mattress</h4>
+            <p class="price">₹5,499</p>
+            <button class="cart-btn2">Add to Cart</button>
+        </div>
+
+        <div class="product-card2">
+            <img src="./images/health_wellness/oximeter.jpeg" alt="">
+            <h4>Fingertip Pulse Oximeter</h4>
+            <p class="price">₹799</p>
+            <button class="cart-btn2">Add to Cart</button>
+        </div>
+
     </div>
 
-    <div class="product-card" data-name="BP Monitor">
-        <img src="./images/health_wellness/blood-pressure-monitor.jpeg">
-        <h4>Digital BP Monitor</h4>
-        <div class="rating">★★★★★</div>
-        <p>₹2,499</p>
-        <button class="add-btn">Add to Cart</button>
-    </div>
-
-    <div class="product-card" data-name="Walker">
-        <img src="./images/mobility/Folding-Walker.jpeg">
-        <h4>Adjustable Walker</h4>
-        <div class="rating">★★★★☆</div>
-        <p>₹1,899</p>
-        <button class="add-btn">Add to Cart</button>
-    </div>
-
-    <div class="product-card" data-name="Nebulizer">
-        <img src="./images/health_wellness/Nebulizer.jpeg">
-        <h4>Portable Nebulizer</h4>
-        <div class="rating">★★★★☆</div>
-        <p>₹1,499</p>
-        <button class="add-btn">Add to Cart</button>
-    </div>
-
-    <div class="product-card" data-name="Air Mattress">
-        <img src="./images/patient_care/Air-mattress.jpeg">
-        <h4>Air Mattress</h4>
-        <div class="rating">★★★★☆</div>
-        <p>₹5,499</p>
-        <button class="add-btn">Add to Cart</button>
-    </div>
-
-    <div class="product-card" data-name="Oximeter">
-        <img src="./images/health_wellness/oximeter.jpeg">
-        <h4>Fingertip Pulse Oximeter</h4>
-        <div class="rating">★★★★★</div>
-        <p>₹799</p>
-        <button class="add-btn">Add to Cart</button>
-    </div>
-
+    <button class="slide-btn next" onclick="slideRight()">&#10095;</button>
 </div>
+</div>
+
+<section class="mobility-aids" id="mobility">
+<div class="mobility-container">
+    <div class="mobility-header">
+        <h2>Mobility Aids</h2>
+        <a href="./mobilityaids.html" class="view-all">View All</a>
+    </div>
+
+    <div class="mobility-wrapper">
+        <button class="scroll-btn left" onclick="scrollMobility(-300)">&#10094;</button>
+        <button class="scroll-btn right" onclick="scrollMobility(300)">&#10095;</button> 
+        
+        <div class="mobility-grid" id="mobilityGrid">
+
+        </div>
+    </div>
+</div>
+
+    <!-- <h2 class="section-title">Mobility Aids</h2> -->
+    <!-- <div class="mobility-products" id="mobilityProducts"> -->
+        <!-- JS will inject product cards here -->
+    <!-- </div> -->
+</section>
+
+<section class="surgical-instruments" id="surgical">
+  <div class="surg-container">
+      <div class="surg-header">
+          <h2>Surgical Instruments</h2>
+          <a href="./surgicalinstruments.html" class="view-all">View All</a>
+      </div>
+
+      <div class="surg-wrapper">
+          <button class="scroll-btn left" onclick="scrollSurg(-300)">&#10094;</button>
+          <button class="scroll-btn right" onclick="scrollSurg(300)">&#10095;</button>
+
+          <div class="surg-grid" id="surgGrid"></div>
+      </div>
+  </div>
+</section>
+
+<section class="health-wellness" id="health">
+  <div class="health-container">
+      <div class="health-header">
+          <h2>Health & Wellness</h2>
+          <a href="./healthwellness.html" class="view-all">View All</a>
+      </div>
+
+      <div class="health-wrapper">
+          <button class="scroll-btn left" onclick="scrollHealth(-300)">&#10094;</button>
+          <button class="scroll-btn right" onclick="scrollHealth(300)">&#10095;</button>
+
+          <div class="health-grid" id="healthGrid"></div>
+      </div>
+  </div>
+</section>
+
+
+<section class="personal-care" id="personal">
+  <div class="personal-container">
+      <div class="personal-header">
+          <h2>Personal Care</h2>
+          <a href="./personalcare.html" class="view-all">View All</a>
+      </div>
+
+      <div class="personal-wrapper">
+          <button class="scroll-btn left" onclick="scrollPersonal(-300)">&#10094;</button>
+          <button class="scroll-btn right" onclick="scrollPersonal(300)">&#10095;</button>
+
+          <div class="personal-grid" id="personalGrid"></div>
+      </div>
+  </div>
+</section>
+
+
+<section class="patient-care" id="patient">
+  <div class="patient-container">
+      <div class="patient-header">
+          <h2>Patient Care</h2>
+          <a href="./patientcare.html" class="view-all">View All</a>
+      </div>
+
+      <div class="patient-wrapper">
+          <button class="scroll-btn left" onclick="scrollPatient(-300)">&#10094;</button>
+          <button class="scroll-btn right" onclick="scrollPatient(300)">&#10095;</button>
+
+          <div class="patient-grid" id="patientGrid"></div>
+      </div>
+  </div>
+</section>
+
+<section class="support-care" id="support">
+  <div class="support-container">
+      <div class="support-header">
+          <h2>Support Care</h2>
+          <a href="./supportcare.html" class="view-all">View All</a>
+      </div>
+
+      <div class="support-wrapper">
+          <button class="scroll-btn left" onclick="scrollSupport(-300)">&#10094;</button>
+          <button class="scroll-btn right" onclick="scrollSupport(300)">&#10095;</button>
+
+          <div class="support-grid" id="supportGrid"></div>
+      </div>
+  </div>
+</section>
+
+
+<section class="ostomy-care" id="ostomy">
+  <div class="ostomy-container">
+      <div class="ostomy-header">
+          <h2>Ostomy Care</h2>
+          <a href="./ostomycare.html" class="view-all">View All</a>
+      </div>
+
+      <div class="ostomy-wrapper">
+          <button class="scroll-btn left" onclick="scrollOstomy(-300)">&#10094;</button>
+          <button class="scroll-btn right" onclick="scrollOstomy(300)">&#10095;</button>
+
+          <div class="ostomy-grid" id="ostomyGrid"></div>
+      </div>
+  </div>
+</section>
+
 
 
    
@@ -188,7 +307,8 @@
         </div>
     </div>
 </footer>
-
+<script src="./js/product.js"></script>
+<script src="./js/medicalsupplies.js"></script>
     
 </body>
 </html>

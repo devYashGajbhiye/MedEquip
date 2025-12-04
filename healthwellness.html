@@ -4,8 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/surgical.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Health Wellness</h1>
+      <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>MedEquip</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()"></button>
+            <nav id="mainNav">
+                <a href="">Home</a>
+                <div class="dropdown">
+                    <a href="./medicalsupplies.html" class="dropbtn">Medical Supplies ▾</a>
+                    <div class="dropdown-content">
+                    <a href="./mobilityaids.html">Mobility Aids</a>
+                    <a href="./healthwellness.html">Health & Wellness</a>
+                    <a href="./personalcare.html">Personal Care</a>
+                    <a href="./patientcare.html">Patient Care</a>
+                    <a href="./support.html">Support Care</a>
+                    <a href="./ostomycare.html">Ostomy Care</a>
+                    </div>
+                </div>
+                <a href="./about.html">About Us</a>
+                <a href="./review.html">Reviews</a>
+                <a href="./contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+   </header>
+    <h1>Mobility Aids</h1>
+    <div class="page-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h3>Filter By Price</h3>
+        <input class="input-box" type="number" value="320" placeholder="Min price">
+        <input class="input-box" type="number" value="1970" placeholder="Max price">
+
+        <h3>Country of Origin</h3>
+        <input class="input-box" type="text" placeholder="Search Country">
+        <label class="checkbox-label"><input type="checkbox"> India (26)</label>
+
+        <h3>Speciality</h3>
+        <input class="input-box" type="text" placeholder="Search Speciality">
+        <label class="checkbox-label"><input type="checkbox"> Body Belts & Braces (23)</label>
+
+        <h3>Brand</h3>
+        <input class="input-box" type="text" placeholder="Search Brand">
+        <label class="checkbox-label"><input type="checkbox"> Tynor</label>
+    </div>
+
+    <!-- PRODUCT AREA -->
+    <div class="content-area">
+
+        <div class="top-row">
+            <div class="sort-tabs">
+                <span class="active">Relevance</span>
+                <span>Price Low To High</span>
+                <span>Price High To Low</span>
+            </div>
+            <div class="reset">Reset Filters</div>
+        </div>
+
+        <!-- PRODUCTS GRID -->
+        <div class="product-grid"></div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>MedEquip</h2>
+            <p>Fast shopping. Happy clicking.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><strong>Address: </strong>Pentagon 3GW6F+G72, Magarpatta, Hadapsar, Pune, Maharashtra 411013  </p>
+            <p><strong>Email: </strong><a href="mailto:info@MedEquip.com">info@MedEquip.com</a></p>
+            <p><strong>Contact No: </strong><a href="tel:+919876543210">+91 98765 43210</a></p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+             <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                 <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+                <p>© MedEquip 2025. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="./js/product.js"></script>
+<script src="./js/health.js"></script>
 </body>
 </html>
