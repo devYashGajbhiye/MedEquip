@@ -167,6 +167,7 @@ nav a:hover, nav a.active {
         margin-bottom: 10px;
         font-size: 17px;
         font-weight: 600;
+        color: #333;
     }
 
     .input-box {
